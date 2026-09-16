@@ -35,13 +35,15 @@ void loop()
     button1.update();
     button2.update();
 
-    if (button1.isPressed())
+    if (button1.pressed())
     {
         digitalWrite(LED1, HIGH);
         Serial.print("button1 ");
         Serial.print("1");
         Serial.println("");
-    } else {
+    }
+    else if (button1.released())
+    {
         digitalWrite(LED1, LOW);
     }
 
